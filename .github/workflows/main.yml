@@ -2,7 +2,7 @@ on:
   push:
     branches:
       - main
-name: 🚀 Deploy website on push
+name: 🚀 Deploy Damasceno.dev - Main
 jobs:
   web-deploy:
     name: 🎉 Deploy
@@ -17,4 +17,4 @@ jobs:
           server: ${{ secrets.ftp_host }}
           username: ${{ secrets.ftp_user }}
           password: ${{ secrets.ftp_password }}
-          server_dir: /public_html/
+          server_dir: public_html/
