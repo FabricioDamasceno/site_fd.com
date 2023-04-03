@@ -2,7 +2,7 @@ on:
   push:
     branches:
       - main
-name: 🚀 Deploy Damasceno.dev - Main
+name: 🚀 Deploy Damasceno.dev
 jobs:
   web-deploy:
     name: 🎉 Deploy
