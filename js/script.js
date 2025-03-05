@@ -57,3 +57,26 @@ const typed = new Typed('.multiple-text', {
     backDelay: 1000,
     loop: true
 })
+
+async function handleSubmit(event) {
+  event.preventDefault();
+  
+  const formData = new FormData(event.target);
+  const data = Object.fromEntries(formData);
+
+  try {
+    const response = await fetch('http://localhost:3000/send-email', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data)
+    });
+
+    const result = await response.json();
+    alert(result.message);
+    event.target.reset();
+  } catch (error) {
+    alert('Erro ao enviar email');
+  }
+}

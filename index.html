@@ -50,23 +50,7 @@
             <a href="#contact" class="btn">Contrate-me</a>
         </div>
 
-        <div class="home-img">
-            <!--
-            <img srcset="images/PNG/FotoPerfil_189x241.png 576w,
-            images/PNG/FotoPerfil_247x315.png 768w,
-            images/PNG/FotoPerfil_300x382.png 992w,
-            images/PNG/FotoPerfil_307x391.png 1200w" sizes="(max-width: 576px) 280px,
-            (max-width: 768px) 580px,
-            (max-width: 992px) 780px,
-            1200px" src="images/PNG/FotoPerfil_307x391.png" alt="Fabrício Damasceno">-->
-            <!--
-            <picture>
-                <source media="(min-width: 365px)" src="images/PNG/" />
-                <source media="(min-width: 450px)" srcset="images/WEBP/FotoPerfil_224x286.webp" sizes="100vw" />
-                <source media="(min-width: 768px)" srcset="images/PNG/FotoPerfil_307x391.png" sizes="100vw" />
-                <source media="(min-width: 991px)" srcset="images/WEBP/FotoPerfil_247x315.webp" sizes="100vw" />
-                <source media="(min-width: 1200px)" src="images/WEBP/FotoPerfil_300x382.webp" sizes="100vw" />
-            </picture>-->
+        <div class="home-img">           
 
             <img src="images/PNG/FotoPerfil_307x391.png" alt="Fabrício Damasceno - Desenvolvedor Web">
         </div>
@@ -173,15 +157,7 @@
                     <a href="#"><i class='bx bx-link-external'></i></a>
                 </div>
             </div>
-            <!--
-            <div class="portfolio-box">
-                <img src="images/portfolio6_FundoTransparente.png" alt="Atendente Virtual">
-                <div class="portfolio-layer">
-                    <h4>Atendente Virtual</h4>
-                    <p>Atendente Virtual <br /> (Em breve...)</p>
-                    <a href="#"><i class='bx bx-link-external'></i></a>
-                </div>
-            </div>-->
+            
 
         </div>
     </section>
@@ -189,22 +165,19 @@
     <!-- Designer Section Contato -->
     <section class="contact" id="contact">
         <h2 class="heading">Entre em <span>Contato</span></h2>
-
-        <form class="form" method="POST" action="./email.php">
-            <div class="input-box">
-                <input name="name" type="text" placeholder="Nome Completo" required />
-                <input name="email" type="email" placeholder="E-mail" required />
-            </div>
-            <div class="input-box">
-                <input name="contact" type="text" placeholder="Contato">
-                <input name="subject" type="text" placeholder="Assunto">
-            </div>
-            <textarea name="message" id="" cols="30" rows="10" placeholder="Sua Mensagem..." required>
-
-            </textarea>
-            <input type="submit" value="Enviar" class="btn">
-        </form>
-    </section>
+          <form class="form" onsubmit="handleSubmit(event)">
+              <div class="input-box">
+                  <input name="name" type="text" placeholder="Nome Completo" required />
+                  <input name="email" type="email" placeholder="E-mail" required />
+              </div>
+              <div class="input-box">
+                  <input name="contact" type="text" placeholder="Contato">
+                  <input name="subject" type="text" placeholder="Assunto">
+              </div>
+              <textarea name="message" id="" cols="30" rows="10" placeholder="Sua Mensagem..." required></textarea>
+              <input type="submit" value="Enviar" class="btn">
+          </form>
+      </section>
 
     <!-- Designer Section Rodapé -->
     <footer class="footer">
